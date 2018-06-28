@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{93B2F46E-08E6-4D7A-8C96-F13C964C1F3E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Amalay.WindowApp</RootNamespace>
+    <AssemblyName>Amalay.WindowApp</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\Common.cs" />
+    <Compile Include="Common\Enumeration.cs" />
+    <Compile Include="Common\Utilities.cs" />
+    <Compile Include="DataStructures\Sorting\MergeSort.cs" />
+    <Compile Include="DataStructures\Sorting\QuickSort.cs" />
+    <Compile Include="Delegates\MulticastDelegate.cs" />
+    <Compile Include="Delegates\SinglecastDelegate.cs" />
+    <Compile Include="DesignPatterns\AbstractFactoryPattern\Sample1\AbstractFactory.cs" />
+    <Compile Include="DesignPatterns\AbstractFactoryPattern\Sample1\AbstractFactoryClient.cs" />
+    <Compile Include="DesignPatterns\AbstractFactoryPattern\Sample2\AbstractFactory.cs" />
+    <Compile Include="DesignPatterns\AbstractFactoryPattern\Sample2\AbstractFactoryClient.cs" />
+    <Compile Include="DesignPatterns\AbstractFactoryPattern\Sample2\AccountFactory.cs" />
+    <Compile Include="DesignPatterns\AbstractFactoryPattern\Sample2\CurrentAccountFactory.cs" />
+    <Compile Include="DesignPatterns\AbstractFactoryPattern\Sample2\SavingAccountFactory.cs" />
+    <Compile Include="Entities\Bike.cs" />
+    <Compile Include="DesignPatterns\AbstractFactoryPattern\Sample1\BikeFactory.cs" />
+    <Compile Include="Entities\Car.cs" />
+    <Compile Include="DesignPatterns\AbstractFactoryPattern\Sample1\CarFactory.cs" />
+    <Compile Include="Entities\CurrentAccount.cs" />
+    <Compile Include="Entities\IAccount.cs" />
+    <Compile Include="Entities\IVehical.cs" />
+    <Compile Include="DesignPatterns\AbstractFactoryPattern\Sample1\IVehicalFactory.cs" />
+    <Compile Include="DesignPatterns\FactoryPattern\Factory.cs" />
+    <Compile Include="DesignPatterns\FactoryPattern\FactoryClient.cs" />
+    <Compile Include="Entities\SavingAccount.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataStructures\Array\" />
+    <Folder Include="DataStructures\Graph\" />
+    <Folder Include="DataStructures\LinkedList\" />
+    <Folder Include="DataStructures\Queue\" />
+    <Folder Include="DataStructures\Searching\" />
+    <Folder Include="DataStructures\Stack\" />
+    <Folder Include="DataStructures\Tree\" />
+    <Folder Include="Exceptions\" />
+    <Folder Include="Inheritance\" />
+    <Folder Include="StringManipulations\" />
+    <Folder Include="TaskChaining\" />
+    <Folder Include="Threading\" />
+    <Folder Include="Yield\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
