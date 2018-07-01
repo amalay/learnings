@@ -51,6 +51,7 @@
     <Compile Include="Common\Utilities.cs" />
     <Compile Include="DataStructures\Sorting\MergeSort.cs" />
     <Compile Include="DataStructures\Sorting\QuickSort.cs" />
+    <Compile Include="Delegates\DelegateSamples.cs" />
     <Compile Include="Delegates\MulticastDelegate.cs" />
     <Compile Include="Delegates\SinglecastDelegate.cs" />
     <Compile Include="DesignPatterns\AbstractFactoryPattern\Sample1\AbstractFactory.cs" />
@@ -65,12 +66,20 @@
     <Compile Include="Entities\Car.cs" />
     <Compile Include="DesignPatterns\AbstractFactoryPattern\Sample1\CarFactory.cs" />
     <Compile Include="Entities\CurrentAccount.cs" />
+    <Compile Include="Entities\Employee.cs" />
+    <Compile Include="Entities\First.cs" />
     <Compile Include="Entities\IAccount.cs" />
     <Compile Include="Entities\IVehical.cs" />
     <Compile Include="DesignPatterns\AbstractFactoryPattern\Sample1\IVehicalFactory.cs" />
     <Compile Include="DesignPatterns\FactoryPattern\Factory.cs" />
     <Compile Include="DesignPatterns\FactoryPattern\FactoryClient.cs" />
+    <Compile Include="Entities\Person.cs" />
     <Compile Include="Entities\SavingAccount.cs" />
+    <Compile Include="Entities\Second.cs" />
+    <Compile Include="Exceptions\TryCatchFinallyDemo.cs" />
+    <Compile Include="Generals\NullVariablesDemo.cs" />
+    <Compile Include="Generals\StaticVariablesDemo.cs" />
+    <Compile Include="Inheritance\Shadowing\Shadowing.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +88,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringManipulations\StringDemo.cs" />
+    <Compile Include="Threadings\MultiThreading\MultiThreading.cs" />
+    <Compile Include="Threadings\TaskChaining\TaskChaining.cs" />
+    <Compile Include="Threadings\Tasks\TaskDemo.cs" />
+    <Compile Include="Threadings\ThreadSafe\ThreadSafeDemo.cs" />
+    <Compile Include="Yield\YieldDemo.cs" />
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -112,12 +127,7 @@
     <Folder Include="DataStructures\Searching\" />
     <Folder Include="DataStructures\Stack\" />
     <Folder Include="DataStructures\Tree\" />
-    <Folder Include="Exceptions\" />
-    <Folder Include="Inheritance\" />
-    <Folder Include="StringManipulations\" />
-    <Folder Include="TaskChaining\" />
-    <Folder Include="Threading\" />
-    <Folder Include="Yield\" />
+    <Folder Include="Threadings\SingleThreading\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

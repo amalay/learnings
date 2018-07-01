@@ -69,21 +69,55 @@
             this.sample1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sample2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.singletonPatternToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
             this.cToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.delegatesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.threadingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.singlecastDelegateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.multicastDelegateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.inheritanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.threadingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.singleThreadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.multiThreadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextSwitchingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.resourceSharingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.localMemorySharingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.threadPoolToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sleepAndJoinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exceptionHandllingInMultiThreadingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.threadSafeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.notThreadSafeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.threadSafeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.mutexToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.semaphoreToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.taskChainingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.taskToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.task1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.task2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.inheritanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.shadowingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.yieldToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.yieldSample1ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.yieldSample2ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.exceptionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stringManipulationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stringComparisonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.stringFormattingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.generalToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.staticVariablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.staticVariableSample1ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.nullVariablesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nullVariableSample1ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.stringTwinsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tryCatchFinallyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tryCatchFinallySample1ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.tryCatchImplementationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TryCatchImplementationSample1ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.covarianceInDelegateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nonGenericDelegateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.genericDelegateToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.genericDelegateSample1ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.genericDelegateSample2ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.genericDelegateSample3ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -395,14 +429,14 @@
             // sample1ToolStripMenuItem
             // 
             this.sample1ToolStripMenuItem.Name = "sample1ToolStripMenuItem";
-            this.sample1ToolStripMenuItem.Size = new System.Drawing.Size(210, 32);
+            this.sample1ToolStripMenuItem.Size = new System.Drawing.Size(177, 32);
             this.sample1ToolStripMenuItem.Text = "Sample 1";
             this.sample1ToolStripMenuItem.Click += new System.EventHandler(this.sample1ToolStripMenuItem_Click);
             // 
             // sample2ToolStripMenuItem
             // 
             this.sample2ToolStripMenuItem.Name = "sample2ToolStripMenuItem";
-            this.sample2ToolStripMenuItem.Size = new System.Drawing.Size(210, 32);
+            this.sample2ToolStripMenuItem.Size = new System.Drawing.Size(177, 32);
             this.sample2ToolStripMenuItem.Text = "Sample 2";
             this.sample2ToolStripMenuItem.Click += new System.EventHandler(this.sample2ToolStripMenuItem_Click);
             // 
@@ -412,6 +446,257 @@
             this.singletonPatternToolStripMenuItem.Size = new System.Drawing.Size(305, 32);
             this.singletonPatternToolStripMenuItem.Text = "Singleton Pattern";
             this.singletonPatternToolStripMenuItem.Click += new System.EventHandler(this.singletonPatternToolStripMenuItem_Click);
+            // 
+            // cToolStripMenuItem
+            // 
+            this.cToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.delegatesToolStripMenuItem,
+            this.threadingsToolStripMenuItem,
+            this.inheritanceToolStripMenuItem,
+            this.yieldToolStripMenuItem,
+            this.exceptionToolStripMenuItem,
+            this.stringManipulationsToolStripMenuItem,
+            this.generalToolStripMenuItem1});
+            this.cToolStripMenuItem.Name = "cToolStripMenuItem";
+            this.cToolStripMenuItem.Size = new System.Drawing.Size(48, 32);
+            this.cToolStripMenuItem.Text = "C#";
+            // 
+            // delegatesToolStripMenuItem
+            // 
+            this.delegatesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.singlecastDelegateToolStripMenuItem,
+            this.multicastDelegateToolStripMenuItem,
+            this.covarianceInDelegateToolStripMenuItem});
+            this.delegatesToolStripMenuItem.Name = "delegatesToolStripMenuItem";
+            this.delegatesToolStripMenuItem.Size = new System.Drawing.Size(278, 32);
+            this.delegatesToolStripMenuItem.Text = "Delegates";
+            // 
+            // singlecastDelegateToolStripMenuItem
+            // 
+            this.singlecastDelegateToolStripMenuItem.Name = "singlecastDelegateToolStripMenuItem";
+            this.singlecastDelegateToolStripMenuItem.Size = new System.Drawing.Size(296, 32);
+            this.singlecastDelegateToolStripMenuItem.Text = "Singlecast Delegate";
+            this.singlecastDelegateToolStripMenuItem.Click += new System.EventHandler(this.singlecastDelegateToolStripMenuItem_Click);
+            // 
+            // multicastDelegateToolStripMenuItem
+            // 
+            this.multicastDelegateToolStripMenuItem.Name = "multicastDelegateToolStripMenuItem";
+            this.multicastDelegateToolStripMenuItem.Size = new System.Drawing.Size(296, 32);
+            this.multicastDelegateToolStripMenuItem.Text = "Multicast Delegate";
+            this.multicastDelegateToolStripMenuItem.Click += new System.EventHandler(this.multicastDelegateToolStripMenuItem_Click);
+            // 
+            // threadingsToolStripMenuItem
+            // 
+            this.threadingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.singleThreadToolStripMenuItem,
+            this.multiThreadToolStripMenuItem,
+            this.threadSafeToolStripMenuItem,
+            this.taskChainingToolStripMenuItem,
+            this.taskToolStripMenuItem});
+            this.threadingsToolStripMenuItem.Name = "threadingsToolStripMenuItem";
+            this.threadingsToolStripMenuItem.Size = new System.Drawing.Size(278, 32);
+            this.threadingsToolStripMenuItem.Text = "Threadings";
+            // 
+            // singleThreadToolStripMenuItem
+            // 
+            this.singleThreadToolStripMenuItem.Name = "singleThreadToolStripMenuItem";
+            this.singleThreadToolStripMenuItem.Size = new System.Drawing.Size(243, 32);
+            this.singleThreadToolStripMenuItem.Text = "Single Threading";
+            // 
+            // multiThreadToolStripMenuItem
+            // 
+            this.multiThreadToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.contextSwitchingToolStripMenuItem,
+            this.resourceSharingToolStripMenuItem,
+            this.localMemorySharingToolStripMenuItem,
+            this.threadPoolToolStripMenuItem,
+            this.sleepAndJoinToolStripMenuItem,
+            this.exceptionHandllingInMultiThreadingToolStripMenuItem});
+            this.multiThreadToolStripMenuItem.Name = "multiThreadToolStripMenuItem";
+            this.multiThreadToolStripMenuItem.Size = new System.Drawing.Size(243, 32);
+            this.multiThreadToolStripMenuItem.Text = "Multi Threading";
+            // 
+            // contextSwitchingToolStripMenuItem
+            // 
+            this.contextSwitchingToolStripMenuItem.Name = "contextSwitchingToolStripMenuItem";
+            this.contextSwitchingToolStripMenuItem.Size = new System.Drawing.Size(436, 32);
+            this.contextSwitchingToolStripMenuItem.Text = "Context Switching";
+            this.contextSwitchingToolStripMenuItem.Click += new System.EventHandler(this.contextSwitchingToolStripMenuItem_Click);
+            // 
+            // resourceSharingToolStripMenuItem
+            // 
+            this.resourceSharingToolStripMenuItem.Name = "resourceSharingToolStripMenuItem";
+            this.resourceSharingToolStripMenuItem.Size = new System.Drawing.Size(436, 32);
+            this.resourceSharingToolStripMenuItem.Text = "Resource Sharing";
+            this.resourceSharingToolStripMenuItem.Click += new System.EventHandler(this.resourceSharingToolStripMenuItem_Click);
+            // 
+            // localMemorySharingToolStripMenuItem
+            // 
+            this.localMemorySharingToolStripMenuItem.Name = "localMemorySharingToolStripMenuItem";
+            this.localMemorySharingToolStripMenuItem.Size = new System.Drawing.Size(436, 32);
+            this.localMemorySharingToolStripMenuItem.Text = "Local Memory Sharing";
+            this.localMemorySharingToolStripMenuItem.Click += new System.EventHandler(this.localMemorySharingToolStripMenuItem_Click);
+            // 
+            // threadPoolToolStripMenuItem
+            // 
+            this.threadPoolToolStripMenuItem.Name = "threadPoolToolStripMenuItem";
+            this.threadPoolToolStripMenuItem.Size = new System.Drawing.Size(436, 32);
+            this.threadPoolToolStripMenuItem.Text = "Thread Pool";
+            this.threadPoolToolStripMenuItem.Click += new System.EventHandler(this.threadPoolToolStripMenuItem_Click);
+            // 
+            // sleepAndJoinToolStripMenuItem
+            // 
+            this.sleepAndJoinToolStripMenuItem.Name = "sleepAndJoinToolStripMenuItem";
+            this.sleepAndJoinToolStripMenuItem.Size = new System.Drawing.Size(436, 32);
+            this.sleepAndJoinToolStripMenuItem.Text = "Sleep And Join";
+            this.sleepAndJoinToolStripMenuItem.Click += new System.EventHandler(this.sleepAndJoinToolStripMenuItem_Click);
+            // 
+            // exceptionHandllingInMultiThreadingToolStripMenuItem
+            // 
+            this.exceptionHandllingInMultiThreadingToolStripMenuItem.Name = "exceptionHandllingInMultiThreadingToolStripMenuItem";
+            this.exceptionHandllingInMultiThreadingToolStripMenuItem.Size = new System.Drawing.Size(436, 32);
+            this.exceptionHandllingInMultiThreadingToolStripMenuItem.Text = "Exception Handlling In Multi Threading";
+            this.exceptionHandllingInMultiThreadingToolStripMenuItem.Click += new System.EventHandler(this.exceptionHandllingInMultiThreadingToolStripMenuItem_Click);
+            // 
+            // threadSafeToolStripMenuItem
+            // 
+            this.threadSafeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.notThreadSafeToolStripMenuItem,
+            this.threadSafeToolStripMenuItem1,
+            this.mutexToolStripMenuItem,
+            this.semaphoreToolStripMenuItem});
+            this.threadSafeToolStripMenuItem.Name = "threadSafeToolStripMenuItem";
+            this.threadSafeToolStripMenuItem.Size = new System.Drawing.Size(243, 32);
+            this.threadSafeToolStripMenuItem.Text = "Thread Safe";
+            // 
+            // notThreadSafeToolStripMenuItem
+            // 
+            this.notThreadSafeToolStripMenuItem.Name = "notThreadSafeToolStripMenuItem";
+            this.notThreadSafeToolStripMenuItem.Size = new System.Drawing.Size(237, 32);
+            this.notThreadSafeToolStripMenuItem.Text = "Not Thread Safe";
+            this.notThreadSafeToolStripMenuItem.Click += new System.EventHandler(this.notThreadSafeToolStripMenuItem_Click);
+            // 
+            // threadSafeToolStripMenuItem1
+            // 
+            this.threadSafeToolStripMenuItem1.Name = "threadSafeToolStripMenuItem1";
+            this.threadSafeToolStripMenuItem1.Size = new System.Drawing.Size(237, 32);
+            this.threadSafeToolStripMenuItem1.Text = "Thread Safe";
+            this.threadSafeToolStripMenuItem1.Click += new System.EventHandler(this.threadSafeToolStripMenuItem1_Click);
+            // 
+            // mutexToolStripMenuItem
+            // 
+            this.mutexToolStripMenuItem.Name = "mutexToolStripMenuItem";
+            this.mutexToolStripMenuItem.Size = new System.Drawing.Size(237, 32);
+            this.mutexToolStripMenuItem.Text = "Mutex";
+            this.mutexToolStripMenuItem.Click += new System.EventHandler(this.mutexToolStripMenuItem_Click);
+            // 
+            // semaphoreToolStripMenuItem
+            // 
+            this.semaphoreToolStripMenuItem.Name = "semaphoreToolStripMenuItem";
+            this.semaphoreToolStripMenuItem.Size = new System.Drawing.Size(237, 32);
+            this.semaphoreToolStripMenuItem.Text = "Semaphore";
+            this.semaphoreToolStripMenuItem.Click += new System.EventHandler(this.semaphoreToolStripMenuItem_Click);
+            // 
+            // taskChainingToolStripMenuItem
+            // 
+            this.taskChainingToolStripMenuItem.Name = "taskChainingToolStripMenuItem";
+            this.taskChainingToolStripMenuItem.Size = new System.Drawing.Size(243, 32);
+            this.taskChainingToolStripMenuItem.Text = "Task Chaining";
+            this.taskChainingToolStripMenuItem.Click += new System.EventHandler(this.taskChainingToolStripMenuItem_Click);
+            // 
+            // taskToolStripMenuItem
+            // 
+            this.taskToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.task1ToolStripMenuItem,
+            this.task2ToolStripMenuItem});
+            this.taskToolStripMenuItem.Name = "taskToolStripMenuItem";
+            this.taskToolStripMenuItem.Size = new System.Drawing.Size(243, 32);
+            this.taskToolStripMenuItem.Text = "Tasks";
+            // 
+            // task1ToolStripMenuItem
+            // 
+            this.task1ToolStripMenuItem.Name = "task1ToolStripMenuItem";
+            this.task1ToolStripMenuItem.Size = new System.Drawing.Size(148, 32);
+            this.task1ToolStripMenuItem.Text = "Task 1";
+            this.task1ToolStripMenuItem.Click += new System.EventHandler(this.task1ToolStripMenuItem_Click);
+            // 
+            // task2ToolStripMenuItem
+            // 
+            this.task2ToolStripMenuItem.Name = "task2ToolStripMenuItem";
+            this.task2ToolStripMenuItem.Size = new System.Drawing.Size(148, 32);
+            this.task2ToolStripMenuItem.Text = "Task 2";
+            this.task2ToolStripMenuItem.Click += new System.EventHandler(this.task2ToolStripMenuItem_Click);
+            // 
+            // inheritanceToolStripMenuItem
+            // 
+            this.inheritanceToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.shadowingToolStripMenuItem});
+            this.inheritanceToolStripMenuItem.Name = "inheritanceToolStripMenuItem";
+            this.inheritanceToolStripMenuItem.Size = new System.Drawing.Size(278, 32);
+            this.inheritanceToolStripMenuItem.Text = "Inheritance";
+            // 
+            // shadowingToolStripMenuItem
+            // 
+            this.shadowingToolStripMenuItem.Name = "shadowingToolStripMenuItem";
+            this.shadowingToolStripMenuItem.Size = new System.Drawing.Size(194, 32);
+            this.shadowingToolStripMenuItem.Text = "Shadowing";
+            this.shadowingToolStripMenuItem.Click += new System.EventHandler(this.shadowingToolStripMenuItem_Click);
+            // 
+            // yieldToolStripMenuItem
+            // 
+            this.yieldToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.yieldSample1ToolStripMenuItem1,
+            this.yieldSample2ToolStripMenuItem1});
+            this.yieldToolStripMenuItem.Name = "yieldToolStripMenuItem";
+            this.yieldToolStripMenuItem.Size = new System.Drawing.Size(278, 32);
+            this.yieldToolStripMenuItem.Text = "Yield";
+            // 
+            // yieldSample1ToolStripMenuItem1
+            // 
+            this.yieldSample1ToolStripMenuItem1.Name = "yieldSample1ToolStripMenuItem1";
+            this.yieldSample1ToolStripMenuItem1.Size = new System.Drawing.Size(210, 32);
+            this.yieldSample1ToolStripMenuItem1.Text = "Sample 1";
+            this.yieldSample1ToolStripMenuItem1.Click += new System.EventHandler(this.yieldSample1ToolStripMenuItem1_Click);
+            // 
+            // yieldSample2ToolStripMenuItem1
+            // 
+            this.yieldSample2ToolStripMenuItem1.Name = "yieldSample2ToolStripMenuItem1";
+            this.yieldSample2ToolStripMenuItem1.Size = new System.Drawing.Size(210, 32);
+            this.yieldSample2ToolStripMenuItem1.Text = "Sample 2";
+            this.yieldSample2ToolStripMenuItem1.Click += new System.EventHandler(this.yieldSample2ToolStripMenuItem1_Click);
+            // 
+            // exceptionToolStripMenuItem
+            // 
+            this.exceptionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tryCatchFinallyToolStripMenuItem,
+            this.tryCatchImplementationsToolStripMenuItem});
+            this.exceptionToolStripMenuItem.Name = "exceptionToolStripMenuItem";
+            this.exceptionToolStripMenuItem.Size = new System.Drawing.Size(278, 32);
+            this.exceptionToolStripMenuItem.Text = "Exception";
+            // 
+            // stringManipulationsToolStripMenuItem
+            // 
+            this.stringManipulationsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.stringComparisonToolStripMenuItem,
+            this.stringFormattingToolStripMenuItem,
+            this.stringTwinsToolStripMenuItem});
+            this.stringManipulationsToolStripMenuItem.Name = "stringManipulationsToolStripMenuItem";
+            this.stringManipulationsToolStripMenuItem.Size = new System.Drawing.Size(278, 32);
+            this.stringManipulationsToolStripMenuItem.Text = "String Manipulations";
+            // 
+            // stringComparisonToolStripMenuItem
+            // 
+            this.stringComparisonToolStripMenuItem.Name = "stringComparisonToolStripMenuItem";
+            this.stringComparisonToolStripMenuItem.Size = new System.Drawing.Size(259, 32);
+            this.stringComparisonToolStripMenuItem.Text = "String Comparison";
+            this.stringComparisonToolStripMenuItem.Click += new System.EventHandler(this.stringComparisonToolStripMenuItem_Click);
+            // 
+            // stringFormattingToolStripMenuItem
+            // 
+            this.stringFormattingToolStripMenuItem.Name = "stringFormattingToolStripMenuItem";
+            this.stringFormattingToolStripMenuItem.Size = new System.Drawing.Size(259, 32);
+            this.stringFormattingToolStripMenuItem.Text = "String Formatting";
+            this.stringFormattingToolStripMenuItem.Click += new System.EventHandler(this.stringFormattingToolStripMenuItem_Click);
             // 
             // btnClear
             // 
@@ -435,100 +720,128 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // cToolStripMenuItem
+            // generalToolStripMenuItem1
             // 
-            this.cToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.delegatesToolStripMenuItem,
-            this.threadingsToolStripMenuItem,
-            this.inheritanceToolStripMenuItem,
-            this.yieldToolStripMenuItem,
-            this.exceptionToolStripMenuItem});
-            this.cToolStripMenuItem.Name = "cToolStripMenuItem";
-            this.cToolStripMenuItem.Size = new System.Drawing.Size(48, 32);
-            this.cToolStripMenuItem.Text = "C#";
+            this.generalToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.staticVariablesToolStripMenuItem,
+            this.nullVariablesToolStripMenuItem});
+            this.generalToolStripMenuItem1.Name = "generalToolStripMenuItem1";
+            this.generalToolStripMenuItem1.Size = new System.Drawing.Size(278, 32);
+            this.generalToolStripMenuItem1.Text = "General";
             // 
-            // delegatesToolStripMenuItem
+            // staticVariablesToolStripMenuItem
             // 
-            this.delegatesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.singlecastDelegateToolStripMenuItem,
-            this.multicastDelegateToolStripMenuItem});
-            this.delegatesToolStripMenuItem.Name = "delegatesToolStripMenuItem";
-            this.delegatesToolStripMenuItem.Size = new System.Drawing.Size(210, 32);
-            this.delegatesToolStripMenuItem.Text = "Delegates";
+            this.staticVariablesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.staticVariableSample1ToolStripMenuItem1});
+            this.staticVariablesToolStripMenuItem.Name = "staticVariablesToolStripMenuItem";
+            this.staticVariablesToolStripMenuItem.Size = new System.Drawing.Size(227, 32);
+            this.staticVariablesToolStripMenuItem.Text = "Static Variables";
             // 
-            // threadingsToolStripMenuItem
+            // staticVariableSample1ToolStripMenuItem1
             // 
-            this.threadingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.singleThreadToolStripMenuItem,
-            this.multiThreadToolStripMenuItem,
-            this.threadSafeToolStripMenuItem,
-            this.taskChainingToolStripMenuItem,
-            this.taskToolStripMenuItem});
-            this.threadingsToolStripMenuItem.Name = "threadingsToolStripMenuItem";
-            this.threadingsToolStripMenuItem.Size = new System.Drawing.Size(210, 32);
-            this.threadingsToolStripMenuItem.Text = "Threadings";
+            this.staticVariableSample1ToolStripMenuItem1.Name = "staticVariableSample1ToolStripMenuItem1";
+            this.staticVariableSample1ToolStripMenuItem1.Size = new System.Drawing.Size(210, 32);
+            this.staticVariableSample1ToolStripMenuItem1.Text = "Sample 1";
+            this.staticVariableSample1ToolStripMenuItem1.Click += new System.EventHandler(this.staticVariableSample1ToolStripMenuItem1_Click);
             // 
-            // singlecastDelegateToolStripMenuItem
+            // nullVariablesToolStripMenuItem
             // 
-            this.singlecastDelegateToolStripMenuItem.Name = "singlecastDelegateToolStripMenuItem";
-            this.singlecastDelegateToolStripMenuItem.Size = new System.Drawing.Size(267, 32);
-            this.singlecastDelegateToolStripMenuItem.Text = "Singlecast Delegate";
-            this.singlecastDelegateToolStripMenuItem.Click += new System.EventHandler(this.singlecastDelegateToolStripMenuItem_Click);
+            this.nullVariablesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nullVariableSample1ToolStripMenuItem1});
+            this.nullVariablesToolStripMenuItem.Name = "nullVariablesToolStripMenuItem";
+            this.nullVariablesToolStripMenuItem.Size = new System.Drawing.Size(227, 32);
+            this.nullVariablesToolStripMenuItem.Text = "Null Variables";
             // 
-            // multicastDelegateToolStripMenuItem
+            // nullVariableSample1ToolStripMenuItem1
             // 
-            this.multicastDelegateToolStripMenuItem.Name = "multicastDelegateToolStripMenuItem";
-            this.multicastDelegateToolStripMenuItem.Size = new System.Drawing.Size(267, 32);
-            this.multicastDelegateToolStripMenuItem.Text = "Multicast Delegate";
-            this.multicastDelegateToolStripMenuItem.Click += new System.EventHandler(this.multicastDelegateToolStripMenuItem_Click);
+            this.nullVariableSample1ToolStripMenuItem1.Name = "nullVariableSample1ToolStripMenuItem1";
+            this.nullVariableSample1ToolStripMenuItem1.Size = new System.Drawing.Size(210, 32);
+            this.nullVariableSample1ToolStripMenuItem1.Text = "Sample 1";
+            this.nullVariableSample1ToolStripMenuItem1.Click += new System.EventHandler(this.nullVariableSample1ToolStripMenuItem1_Click);
             // 
-            // inheritanceToolStripMenuItem
+            // stringTwinsToolStripMenuItem
             // 
-            this.inheritanceToolStripMenuItem.Name = "inheritanceToolStripMenuItem";
-            this.inheritanceToolStripMenuItem.Size = new System.Drawing.Size(210, 32);
-            this.inheritanceToolStripMenuItem.Text = "Inheritance";
+            this.stringTwinsToolStripMenuItem.Name = "stringTwinsToolStripMenuItem";
+            this.stringTwinsToolStripMenuItem.Size = new System.Drawing.Size(259, 32);
+            this.stringTwinsToolStripMenuItem.Text = "String Twins";
+            this.stringTwinsToolStripMenuItem.Click += new System.EventHandler(this.stringTwinsToolStripMenuItem_Click);
             // 
-            // singleThreadToolStripMenuItem
+            // tryCatchFinallyToolStripMenuItem
             // 
-            this.singleThreadToolStripMenuItem.Name = "singleThreadToolStripMenuItem";
-            this.singleThreadToolStripMenuItem.Size = new System.Drawing.Size(215, 32);
-            this.singleThreadToolStripMenuItem.Text = "Single Thread";
+            this.tryCatchFinallyToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tryCatchFinallySample1ToolStripMenuItem1});
+            this.tryCatchFinallyToolStripMenuItem.Name = "tryCatchFinallyToolStripMenuItem";
+            this.tryCatchFinallyToolStripMenuItem.Size = new System.Drawing.Size(327, 32);
+            this.tryCatchFinallyToolStripMenuItem.Text = "Try Catch Finally";
             // 
-            // multiThreadToolStripMenuItem
+            // tryCatchFinallySample1ToolStripMenuItem1
             // 
-            this.multiThreadToolStripMenuItem.Name = "multiThreadToolStripMenuItem";
-            this.multiThreadToolStripMenuItem.Size = new System.Drawing.Size(215, 32);
-            this.multiThreadToolStripMenuItem.Text = "Multi Thread";
+            this.tryCatchFinallySample1ToolStripMenuItem1.Name = "tryCatchFinallySample1ToolStripMenuItem1";
+            this.tryCatchFinallySample1ToolStripMenuItem1.Size = new System.Drawing.Size(210, 32);
+            this.tryCatchFinallySample1ToolStripMenuItem1.Text = "Sample 1";
+            this.tryCatchFinallySample1ToolStripMenuItem1.Click += new System.EventHandler(this.tryCatchFinallySample1ToolStripMenuItem1_Click);
             // 
-            // threadSafeToolStripMenuItem
+            // tryCatchImplementationsToolStripMenuItem
             // 
-            this.threadSafeToolStripMenuItem.Name = "threadSafeToolStripMenuItem";
-            this.threadSafeToolStripMenuItem.Size = new System.Drawing.Size(215, 32);
-            this.threadSafeToolStripMenuItem.Text = "Thread Safe";
+            this.tryCatchImplementationsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TryCatchImplementationSample1ToolStripMenuItem1});
+            this.tryCatchImplementationsToolStripMenuItem.Name = "tryCatchImplementationsToolStripMenuItem";
+            this.tryCatchImplementationsToolStripMenuItem.Size = new System.Drawing.Size(327, 32);
+            this.tryCatchImplementationsToolStripMenuItem.Text = "Try Catch Implementations";
             // 
-            // taskChainingToolStripMenuItem
+            // TryCatchImplementationSample1ToolStripMenuItem1
             // 
-            this.taskChainingToolStripMenuItem.Name = "taskChainingToolStripMenuItem";
-            this.taskChainingToolStripMenuItem.Size = new System.Drawing.Size(215, 32);
-            this.taskChainingToolStripMenuItem.Text = "Task Chaining";
+            this.TryCatchImplementationSample1ToolStripMenuItem1.Name = "TryCatchImplementationSample1ToolStripMenuItem1";
+            this.TryCatchImplementationSample1ToolStripMenuItem1.Size = new System.Drawing.Size(210, 32);
+            this.TryCatchImplementationSample1ToolStripMenuItem1.Text = "Sample 1";
+            this.TryCatchImplementationSample1ToolStripMenuItem1.Click += new System.EventHandler(this.TryCatchImplementationSample1ToolStripMenuItem1_Click);
             // 
-            // taskToolStripMenuItem
+            // covarianceInDelegateToolStripMenuItem
             // 
-            this.taskToolStripMenuItem.Name = "taskToolStripMenuItem";
-            this.taskToolStripMenuItem.Size = new System.Drawing.Size(215, 32);
-            this.taskToolStripMenuItem.Text = "Task";
+            this.covarianceInDelegateToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.nonGenericDelegateToolStripMenuItem,
+            this.genericDelegateToolStripMenuItem});
+            this.covarianceInDelegateToolStripMenuItem.Name = "covarianceInDelegateToolStripMenuItem";
+            this.covarianceInDelegateToolStripMenuItem.Size = new System.Drawing.Size(296, 32);
+            this.covarianceInDelegateToolStripMenuItem.Text = "Covariance In Delegate";
             // 
-            // yieldToolStripMenuItem
+            // nonGenericDelegateToolStripMenuItem
             // 
-            this.yieldToolStripMenuItem.Name = "yieldToolStripMenuItem";
-            this.yieldToolStripMenuItem.Size = new System.Drawing.Size(210, 32);
-            this.yieldToolStripMenuItem.Text = "Yield";
+            this.nonGenericDelegateToolStripMenuItem.Name = "nonGenericDelegateToolStripMenuItem";
+            this.nonGenericDelegateToolStripMenuItem.Size = new System.Drawing.Size(288, 32);
+            this.nonGenericDelegateToolStripMenuItem.Text = "Non Generic Delegate";
+            this.nonGenericDelegateToolStripMenuItem.Click += new System.EventHandler(this.nonGenericDelegateToolStripMenuItem_Click);
             // 
-            // exceptionToolStripMenuItem
+            // genericDelegateToolStripMenuItem
             // 
-            this.exceptionToolStripMenuItem.Name = "exceptionToolStripMenuItem";
-            this.exceptionToolStripMenuItem.Size = new System.Drawing.Size(210, 32);
-            this.exceptionToolStripMenuItem.Text = "Exception";
+            this.genericDelegateToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.genericDelegateSample1ToolStripMenuItem1,
+            this.genericDelegateSample2ToolStripMenuItem1,
+            this.genericDelegateSample3ToolStripMenuItem});
+            this.genericDelegateToolStripMenuItem.Name = "genericDelegateToolStripMenuItem";
+            this.genericDelegateToolStripMenuItem.Size = new System.Drawing.Size(288, 32);
+            this.genericDelegateToolStripMenuItem.Text = "Generic Delegate";
+            // 
+            // genericDelegateSample1ToolStripMenuItem1
+            // 
+            this.genericDelegateSample1ToolStripMenuItem1.Name = "genericDelegateSample1ToolStripMenuItem1";
+            this.genericDelegateSample1ToolStripMenuItem1.Size = new System.Drawing.Size(210, 32);
+            this.genericDelegateSample1ToolStripMenuItem1.Text = "Sample 1";
+            this.genericDelegateSample1ToolStripMenuItem1.Click += new System.EventHandler(this.genericDelegateSample1ToolStripMenuItem1_Click);
+            // 
+            // genericDelegateSample2ToolStripMenuItem1
+            // 
+            this.genericDelegateSample2ToolStripMenuItem1.Name = "genericDelegateSample2ToolStripMenuItem1";
+            this.genericDelegateSample2ToolStripMenuItem1.Size = new System.Drawing.Size(210, 32);
+            this.genericDelegateSample2ToolStripMenuItem1.Text = "Sample 2";
+            this.genericDelegateSample2ToolStripMenuItem1.Click += new System.EventHandler(this.genericDelegateSample2ToolStripMenuItem1_Click);
+            // 
+            // genericDelegateSample3ToolStripMenuItem
+            // 
+            this.genericDelegateSample3ToolStripMenuItem.Name = "genericDelegateSample3ToolStripMenuItem";
+            this.genericDelegateSample3ToolStripMenuItem.Size = new System.Drawing.Size(210, 32);
+            this.genericDelegateSample3ToolStripMenuItem.Text = "Sample 3";
+            this.genericDelegateSample3ToolStripMenuItem.Click += new System.EventHandler(this.genericDelegateSample3ToolStripMenuItem_Click);
             // 
             // MainForm
             // 
@@ -614,6 +927,40 @@
         private System.Windows.Forms.ToolStripMenuItem inheritanceToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem yieldToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exceptionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem task1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem task2ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem notThreadSafeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem threadSafeToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem mutexToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem semaphoreToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem shadowingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem contextSwitchingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem resourceSharingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem localMemorySharingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem threadPoolToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sleepAndJoinToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exceptionHandllingInMultiThreadingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem stringManipulationsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem stringComparisonToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem stringFormattingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem yieldSample1ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem yieldSample2ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem generalToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem staticVariablesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem staticVariableSample1ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem nullVariablesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nullVariableSample1ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem stringTwinsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tryCatchFinallyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tryCatchFinallySample1ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem tryCatchImplementationsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem TryCatchImplementationSample1ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem covarianceInDelegateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nonGenericDelegateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem genericDelegateToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem genericDelegateSample1ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem genericDelegateSample2ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem genericDelegateSample3ToolStripMenuItem;
     }
 }
 

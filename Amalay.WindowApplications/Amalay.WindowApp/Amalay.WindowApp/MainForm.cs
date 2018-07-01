@@ -21,6 +21,24 @@ namespace Amalay.WindowApp
             Clear();
         }
 
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            Clear();
+        }
+
+        private void Clear()
+        {
+            lblInputText.Text = string.Empty;
+            lblInput.Text = string.Empty;
+            lblOutputText.Text = string.Empty;
+            lblOutput.Text = string.Empty;
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         #region "Sorting"
 
         private void bubbleSortToolStripMenuItem_Click(object sender, EventArgs e)
@@ -92,24 +110,171 @@ namespace Amalay.WindowApp
             Delegates.MulticastDelegate.Instance.Demo();
         }
 
+        private void nonGenericDelegateToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DelegateSamples.Instance.UseOfNonGenericDelegate();
+        }
+
+        private void genericDelegateSample1ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            DelegateSamples.Instance.UseOfGenericDelegate_Sample1();
+        }
+
+        private void genericDelegateSample2ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            DelegateSamples.Instance.UseOfGenericDelegate_Sample2();
+        }
+
+        private void genericDelegateSample3ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DelegateSamples.Instance.UseOfGenericDelegate_Sample3();
+        }
+
+        #endregion
+        
+        #region "Tasks"
+
+        private void taskChainingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TaskChaining.Instance.Method1();
+            TaskChaining.Instance.Method2();
+        }
+
+        private void task1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TaskDemo.Instance.UseOfTask();
+        }
+
+        private void task2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TaskDemo.Instance.UseOfTaskIOBound();
+        }
+
         #endregion
 
-        private void btnClear_Click(object sender, EventArgs e)
+        #region "Thread Safe"
+
+        private void notThreadSafeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Clear();
+            ThreadSafeDemo.Instance.UseOfNotThreadSafe();
         }
 
-        private void Clear()
+        private void threadSafeToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            lblInputText.Text = string.Empty;
-            lblInput.Text = string.Empty;
-            lblOutputText.Text = string.Empty;
-            lblOutput.Text = string.Empty;
+            ThreadSafeDemo.Instance.UseOfThreadSafe();
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void mutexToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
-        }        
+            ThreadSafeDemo.Instance.UseOfMutex();
+        }
+
+        private void semaphoreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ThreadSafeDemo.Instance.UseOfSemaphore();
+        }
+        #endregion
+
+        #region "Inheritance"
+
+        private void shadowingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Shadowing.Instance.UseOfShadowing();
+        }
+        #endregion
+
+        #region "Multi Threading"
+        private void contextSwitchingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MultiThreading.Instance.UseOfContextSwitching();
+        }
+
+        private void resourceSharingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MultiThreading.Instance.UseOfResourceSharing();
+        }
+
+        private void localMemorySharingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MultiThreading.Instance.UseOfLocalMemorySharing();
+        }
+
+        private void threadPoolToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MultiThreading.Instance.UseOfThreadPool();
+        }
+
+        private void sleepAndJoinToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MultiThreading.Instance.UseOfSleepAndJoin();
+        }
+
+        private void exceptionHandllingInMultiThreadingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MultiThreading.Instance.UseOfExceptionHandlling();
+        }
+
+        #endregion
+
+        #region "String Manipulations"
+
+        private void stringComparisonToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StringDemo.Instance.UseOfStringComparison();
+        }
+
+        private void stringFormattingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StringDemo.Instance.UseOfStringFormating();
+        }
+
+        private void stringTwinsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            StringDemo.Instance.FindTwins();
+        }
+
+        #endregion
+
+        #region "Yield"
+
+        private void yieldSample1ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            YieldDemo.Instance.UseOfYield();
+        }
+
+        private void yieldSample2ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        #endregion
+
+        #region "Generals"
+
+        private void staticVariableSample1ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            StaticVariablesDemo.Instance.UseOfStaticVariables();
+        }
+
+        private void nullVariableSample1ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            NullVariablesDemo.Instance.UseOfNullVariables();
+        }
+
+        #endregion
+
+        #region "Exceptions"
+
+        private void tryCatchFinallySample1ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            TryCatchFinallyDemo.Instance.UseOfTryCatchFinallyDemo();
+        }
+
+        private void TryCatchImplementationSample1ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            TryCatchFinallyDemo.Instance.TryCatchImplementation_1();
+        }
+
+        #endregion        
     }
 }
