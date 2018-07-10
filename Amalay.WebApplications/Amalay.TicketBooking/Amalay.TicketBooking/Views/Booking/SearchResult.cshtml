@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Amalay.TicketBooking.Models.SeatingModel>
+
+@{
+    ViewBag.Title = "Book Ticket";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Search Result</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Plane No
+        </th>        
+        <th>
+            Row Number
+        </th>
+        <th>
+            Available Seats
+        </th>
+        <th>
+
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>            
+            <td>
+                @Html.DisplayFor(x => item.PlaneId)
+            </td>    
+            <td>
+                @Html.DisplayFor(x => item.RowIndex)
+            </td>        
+            <td>
+                @Html.DisplayFor(x => item.SeatNames)              
+            </td>
+            <td>
+                @Html.ActionLink("Book Ticket", "BookTicket", new { planeId = item.PlaneId, rowIndex = item.RowIndex, columnIndex = item.ColumnIndex, seatLength = item.SeatLength})
+            </td>
+        </tr>        
+    }
+
+</table>
+<div>
+    @Html.ActionLink("Back to home", "Index")
+</div>
