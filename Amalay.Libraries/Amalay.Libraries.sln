@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amalay.ExternalLibrary", "Amalay.ExternalLibrary\Amalay.ExternalLibrary.csproj", "{F806A99B-DF8C-47C5-8381-FB42B7BA085A}"
 EndProject
@@ -20,6 +20,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amalay.Extensions", "Amalay.Extensions\Amalay.Extensions.csproj", "{C4CE5200-AD38-452A-B792-CA3D1476D939}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amalay.Utilities", "Amalay.Utilities\Amalay.Utilities.csproj", "{2E6EB098-0EF3-4A7E-824A-10D33A41559C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Amalay.Helpers", "Amalay.Helpers\Amalay.Helpers.csproj", "{443F762B-F3ED-4B0D-B88F-1E10FF67FBE6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,8 +65,15 @@ Global
 		{2E6EB098-0EF3-4A7E-824A-10D33A41559C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E6EB098-0EF3-4A7E-824A-10D33A41559C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E6EB098-0EF3-4A7E-824A-10D33A41559C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{443F762B-F3ED-4B0D-B88F-1E10FF67FBE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{443F762B-F3ED-4B0D-B88F-1E10FF67FBE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{443F762B-F3ED-4B0D-B88F-1E10FF67FBE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{443F762B-F3ED-4B0D-B88F-1E10FF67FBE6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {128359F6-18F5-4419-B516-5C431DEED6FA}
 	EndGlobalSection
 EndGlobal
