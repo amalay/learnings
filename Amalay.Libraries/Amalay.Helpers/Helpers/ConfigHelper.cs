@@ -28,6 +28,7 @@ namespace Amalay.Helpers
             Enviornment = Get<string>("Enviornment");
             ExchangeEmail = Get<string>("ExchangeEmail");
             ExchangePassword = Get<string>("ExchangePassword");
+            ServiceBusConnectionString = Get<string>("ServiceBusConnectionString");
             DatabaseConnectionString = Get<string>("DatabaseConnectionString");
         }
 

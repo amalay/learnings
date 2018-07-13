@@ -17,27 +17,9 @@ namespace Amalay.WindowApp
         public MainForm()
         {
             InitializeComponent();
-
-            Clear();
         }
 
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            Clear();
-        }
-
-        private void Clear()
-        {
-            lblInputText.Text = string.Empty;
-            lblInput.Text = string.Empty;
-            lblOutputText.Text = string.Empty;
-            lblOutput.Text = string.Empty;
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        public Form Child { get; set; }
 
         #region "Sorting"
 
@@ -63,18 +45,23 @@ namespace Amalay.WindowApp
 
         private void quickSortToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            QuickSort.Instance.Demo(lblInputText, lblInput, lblOutputText, lblOutput);
+            //QuickSort.Instance.Demo(lblInputText, lblInput, lblOutputText, lblOutput);
         }
 
         private void mergeSortToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MergeSort.Instance.Demo(lblInputText, lblInput, lblOutputText, lblOutput);
+            //MergeSort.Instance.Demo(lblInputText, lblInput, lblOutputText, lblOutput);
         }
 
 
         #endregion
 
         #region "Design Patterns"
+
+        private void designPatternsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.CreateAndActivateChildForm(typeof(ChildForm));
+        }
 
         private void singletonPatternToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -83,17 +70,17 @@ namespace Amalay.WindowApp
 
         private void factoryPatternToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FactoryClient.Instance.Demo(lblInputText, lblInput, lblOutputText, lblOutput);
+            //FactoryClient.Instance.Demo(lblInputText, lblInput, lblOutputText, lblOutput);
         }
 
         private void sample1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DesignPatterns.AbstractFactoryPattern.Sample1.AbstractFactoryClient.Instance.Demo(lblInputText, lblInput, lblOutputText, lblOutput);
+            //DesignPatterns.AbstractFactoryPattern.Sample1.AbstractFactoryClient.Instance.Demo(lblInputText, lblInput, lblOutputText, lblOutput);
         }
 
         private void sample2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DesignPatterns.AbstractFactoryPattern.Sample2.AbstractFactoryClient.Instance.Demo(lblInputText, lblInput, lblOutputText, lblOutput);
+            //DesignPatterns.AbstractFactoryPattern.Sample2.AbstractFactoryClient.Instance.Demo(lblInputText, lblInput, lblOutputText, lblOutput);
         }
 
         #endregion
@@ -275,6 +262,36 @@ namespace Amalay.WindowApp
             TryCatchFinallyDemo.Instance.TryCatchImplementation_1();
         }
 
-        #endregion        
+        #endregion
+
+        #region "Service Bus"
+
+        private void serviceBusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.CreateAndActivateChildForm(typeof(ServiceBusForm));
+        }
+
+        private void CreateAndActivateChildForm(Type childType)
+        {
+            if (this.Child == null || this.Child.GetType() != childType || this.Child.IsDisposed)
+            {                
+                if(this.Child != null)
+                {
+                    this.Child.Close();
+                }
+
+                this.Child = (Form)Activator.CreateInstance(childType);
+                this.Child.MdiParent = this;
+                this.Child.Dock = DockStyle.Fill;
+                this.Child.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+                //this.Child.WindowState = FormWindowState.Maximized;
+                //this.Child.ControlBox = false;
+                //this.Child.TopLevel = false;
+
+                this.Child.Show();
+            }
+        }
+
+        #endregion
     }
 }
