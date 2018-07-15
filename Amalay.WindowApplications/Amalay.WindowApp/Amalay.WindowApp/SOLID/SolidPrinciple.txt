@@ -1,0 +1,14 @@
+﻿What is SOLID?
+
+SOLID are five basic principles which help to create good software architecture. SOLID is an acronym where:-
+
+S stands for SRP (Single responsibility principle
+O stands for OCP (Open closed principle)
+L stands for LSP (Liskov substitution principle)
+I stands for ISP ( Interface segregation principle)
+D stands for DIP ( Dependency inversion principle)
+
+=================================================================================================================
+Understanding “S”- SRP (Single responsibility principle)
+The best way to understand SOLID is by understanding what problem it tries to solve. Have a look at the code below, can you guess what the problem is ?( You are not going to get BEER to guess it J , because it’s too simple).
+

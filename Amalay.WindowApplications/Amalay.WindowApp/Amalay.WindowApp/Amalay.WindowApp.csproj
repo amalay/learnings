@@ -149,6 +149,11 @@
     <Compile Include="ServiceBus\ServiceBusForm.Designer.cs">
       <DependentUpon>ServiceBusForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SOLID\1_S_SingleResponsibilityPrinciple.cs" />
+    <Compile Include="SOLID\2_O_OpenClosedPrinciple.cs" />
+    <Compile Include="SOLID\3_L_LiskovSubstitutionPrinciple.cs" />
+    <Compile Include="SOLID\4_I_InterfaceSegregationPrinciple.cs" />
+    <Compile Include="SOLID\5_D_DependencyInversionPrinciple.cs" />
     <Compile Include="StringManipulations\StringDemo.cs" />
     <Compile Include="Threadings\MultiThreading\MultiThreading.cs" />
     <Compile Include="Threadings\TaskChaining\TaskChaining.cs" />
@@ -210,6 +215,7 @@
     </Content>
     <Content Include="Resources\Libraries\Amalay.Entities.dll" />
     <Content Include="Resources\Libraries\Amalay.Helpers.dll" />
+    <Content Include="SOLID\SolidPrinciple.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Azure.Services.AppAuthentication.1.0.3\build\Microsoft.Azure.Services.AppAuthentication.targets" Condition="Exists('..\packages\Microsoft.Azure.Services.AppAuthentication.1.0.3\build\Microsoft.Azure.Services.AppAuthentication.targets')" />
