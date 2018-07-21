@@ -133,6 +133,7 @@
     <Compile Include="Exceptions\TryCatchFinallyDemo.cs" />
     <Compile Include="Generals\NullVariablesDemo.cs" />
     <Compile Include="Generals\StaticVariablesDemo.cs" />
+    <Compile Include="Generics\Comparer.cs" />
     <Compile Include="Inheritance\Shadowing\Shadowing.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
