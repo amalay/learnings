@@ -103,6 +103,7 @@
     <Compile Include="Common\Common.cs" />
     <Compile Include="Common\Enumeration.cs" />
     <Compile Include="Common\Utilities.cs" />
+    <Compile Include="DataAccess\PersonManager.cs" />
     <Compile Include="DataStructures\Sorting\MergeSort.cs" />
     <Compile Include="DataStructures\Sorting\QuickSort.cs" />
     <Compile Include="Delegates\DelegateSamples.cs" />
@@ -197,6 +198,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="DataAccess\Oracle\" />
+    <Folder Include="DataAccess\SqlServer\" />
     <Folder Include="DataStructures\Array\" />
     <Folder Include="DataStructures\Graph\" />
     <Folder Include="DataStructures\LinkedList\" />

@@ -117,6 +117,11 @@
             this.serializersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.xmlSerializerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.jsonSerializerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dataAccessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sqlServerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.oracleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mySqlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sQLiteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainMenuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -128,7 +133,8 @@
             this.dataStructureToolStripMenuItem,
             this.designPatternsToolStripMenuItem,
             this.cToolStripMenuItem,
-            this.miscellaneousToolStripMenuItem});
+            this.miscellaneousToolStripMenuItem,
+            this.dataAccessToolStripMenuItem});
             this.MainMenuStrip.Location = new System.Drawing.Point(0, 0);
             this.MainMenuStrip.Name = "MainMenuStrip";
             this.MainMenuStrip.Size = new System.Drawing.Size(1178, 36);
@@ -154,7 +160,7 @@
             // generalToolStripMenuItem
             // 
             this.generalToolStripMenuItem.Name = "generalToolStripMenuItem";
-            this.generalToolStripMenuItem.Size = new System.Drawing.Size(252, 32);
+            this.generalToolStripMenuItem.Size = new System.Drawing.Size(187, 32);
             this.generalToolStripMenuItem.Text = "General";
             // 
             // linkedListToolStripMenuItem
@@ -164,7 +170,7 @@
             this.doubleLinkedLitToolStripMenuItem,
             this.circularLinkedListToolStripMenuItem});
             this.linkedListToolStripMenuItem.Name = "linkedListToolStripMenuItem";
-            this.linkedListToolStripMenuItem.Size = new System.Drawing.Size(252, 32);
+            this.linkedListToolStripMenuItem.Size = new System.Drawing.Size(187, 32);
             this.linkedListToolStripMenuItem.Text = "Linked List";
             // 
             // singleLinkedListToolStripMenuItem
@@ -188,7 +194,7 @@
             // arrayToolStripMenuItem
             // 
             this.arrayToolStripMenuItem.Name = "arrayToolStripMenuItem";
-            this.arrayToolStripMenuItem.Size = new System.Drawing.Size(252, 32);
+            this.arrayToolStripMenuItem.Size = new System.Drawing.Size(187, 32);
             this.arrayToolStripMenuItem.Text = "Array";
             // 
             // searchingToolStripMenuItem
@@ -197,7 +203,7 @@
             this.linearSearchToolStripMenuItem,
             this.binarySearchToolStripMenuItem});
             this.searchingToolStripMenuItem.Name = "searchingToolStripMenuItem";
-            this.searchingToolStripMenuItem.Size = new System.Drawing.Size(252, 32);
+            this.searchingToolStripMenuItem.Size = new System.Drawing.Size(187, 32);
             this.searchingToolStripMenuItem.Text = "Searching";
             // 
             // linearSearchToolStripMenuItem
@@ -222,7 +228,7 @@
             this.mergeSortToolStripMenuItem,
             this.heapSortToolStripMenuItem});
             this.sortingToolStripMenuItem.Name = "sortingToolStripMenuItem";
-            this.sortingToolStripMenuItem.Size = new System.Drawing.Size(252, 32);
+            this.sortingToolStripMenuItem.Size = new System.Drawing.Size(187, 32);
             this.sortingToolStripMenuItem.Text = "Sorting";
             // 
             // bubbleSortToolStripMenuItem
@@ -273,7 +279,7 @@
             this.pushToolStripMenuItem,
             this.popToolStripMenuItem});
             this.stackToolStripMenuItem.Name = "stackToolStripMenuItem";
-            this.stackToolStripMenuItem.Size = new System.Drawing.Size(252, 32);
+            this.stackToolStripMenuItem.Size = new System.Drawing.Size(187, 32);
             this.stackToolStripMenuItem.Text = "Stack";
             // 
             // pushToolStripMenuItem
@@ -294,7 +300,7 @@
             this.enqueueToolStripMenuItem,
             this.dequeueToolStripMenuItem});
             this.queueToolStripMenuItem.Name = "queueToolStripMenuItem";
-            this.queueToolStripMenuItem.Size = new System.Drawing.Size(252, 32);
+            this.queueToolStripMenuItem.Size = new System.Drawing.Size(187, 32);
             this.queueToolStripMenuItem.Text = "Queue";
             // 
             // enqueueToolStripMenuItem
@@ -316,7 +322,7 @@
             this.binarySearchTreeToolStripMenuItem,
             this.aVLBalancedTreeToolStripMenuItem});
             this.treeToolStripMenuItem.Name = "treeToolStripMenuItem";
-            this.treeToolStripMenuItem.Size = new System.Drawing.Size(252, 32);
+            this.treeToolStripMenuItem.Size = new System.Drawing.Size(187, 32);
             this.treeToolStripMenuItem.Text = "Tree";
             // 
             // binaryTreeToolStripMenuItem
@@ -343,7 +349,7 @@
             this.depthFirstSearchDFSToolStripMenuItem,
             this.breadthFirstSearchBFSToolStripMenuItem});
             this.graphToolStripMenuItem.Name = "graphToolStripMenuItem";
-            this.graphToolStripMenuItem.Size = new System.Drawing.Size(252, 32);
+            this.graphToolStripMenuItem.Size = new System.Drawing.Size(187, 32);
             this.graphToolStripMenuItem.Text = "Graph";
             // 
             // depthFirstSearchDFSToolStripMenuItem
@@ -808,14 +814,50 @@
             // xmlSerializerToolStripMenuItem
             // 
             this.xmlSerializerToolStripMenuItem.Name = "xmlSerializerToolStripMenuItem";
-            this.xmlSerializerToolStripMenuItem.Size = new System.Drawing.Size(252, 32);
+            this.xmlSerializerToolStripMenuItem.Size = new System.Drawing.Size(218, 32);
             this.xmlSerializerToolStripMenuItem.Text = "Xml Serializer";
             // 
             // jsonSerializerToolStripMenuItem
             // 
             this.jsonSerializerToolStripMenuItem.Name = "jsonSerializerToolStripMenuItem";
-            this.jsonSerializerToolStripMenuItem.Size = new System.Drawing.Size(252, 32);
+            this.jsonSerializerToolStripMenuItem.Size = new System.Drawing.Size(218, 32);
             this.jsonSerializerToolStripMenuItem.Text = "Json Serializer";
+            // 
+            // dataAccessToolStripMenuItem
+            // 
+            this.dataAccessToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sqlServerToolStripMenuItem,
+            this.oracleToolStripMenuItem,
+            this.mySqlToolStripMenuItem,
+            this.sQLiteToolStripMenuItem});
+            this.dataAccessToolStripMenuItem.Name = "dataAccessToolStripMenuItem";
+            this.dataAccessToolStripMenuItem.Size = new System.Drawing.Size(127, 32);
+            this.dataAccessToolStripMenuItem.Text = "Data Access";
+            // 
+            // sqlServerToolStripMenuItem
+            // 
+            this.sqlServerToolStripMenuItem.Name = "sqlServerToolStripMenuItem";
+            this.sqlServerToolStripMenuItem.Size = new System.Drawing.Size(252, 32);
+            this.sqlServerToolStripMenuItem.Text = "Sql Server";
+            this.sqlServerToolStripMenuItem.Click += new System.EventHandler(this.sqlServerToolStripMenuItem_Click);
+            // 
+            // oracleToolStripMenuItem
+            // 
+            this.oracleToolStripMenuItem.Name = "oracleToolStripMenuItem";
+            this.oracleToolStripMenuItem.Size = new System.Drawing.Size(252, 32);
+            this.oracleToolStripMenuItem.Text = "Oracle";
+            // 
+            // mySqlToolStripMenuItem
+            // 
+            this.mySqlToolStripMenuItem.Name = "mySqlToolStripMenuItem";
+            this.mySqlToolStripMenuItem.Size = new System.Drawing.Size(252, 32);
+            this.mySqlToolStripMenuItem.Text = "MySql";
+            // 
+            // sQLiteToolStripMenuItem
+            // 
+            this.sQLiteToolStripMenuItem.Name = "sQLiteToolStripMenuItem";
+            this.sQLiteToolStripMenuItem.Size = new System.Drawing.Size(252, 32);
+            this.sQLiteToolStripMenuItem.Text = "SQLite";
             // 
             // MainForm
             // 
@@ -928,6 +970,11 @@
         private System.Windows.Forms.ToolStripMenuItem serializersToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem xmlSerializerToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem jsonSerializerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dataAccessToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sqlServerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem oracleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mySqlToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sQLiteToolStripMenuItem;
     }
 }
 
