@@ -293,5 +293,20 @@ namespace Amalay.WindowApp
         }
 
         #endregion
+
+        private void sqlServerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string message = string.Empty;
+
+            try
+            {
+                DataAccess.PersonManager personManager = new DataAccess.PersonManager();
+                IList<Amalay.Entities.Person> list = personManager.GetAll(ref message);
+            }
+            catch(Exception ex)
+            {
+                message = ex.Message;
+            }
+        }
     }
 }

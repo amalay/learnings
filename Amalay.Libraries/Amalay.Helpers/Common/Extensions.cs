@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,6 +10,37 @@ namespace Amalay.Helpers
 {
     public static class Extensions
     {
+        public static IEnumerable<T> GetEnumerator<T>(this IDataReader dataReader, Func<IDataRecord, T> generator)
+        {
+            while (dataReader.Read())
+            {
+                yield return generator(dataReader);
+            }
+        }
+
+        public static IEnumerable<T> Sort<T>(this IEnumerable<T> source, string sortExpression)
+        {
+            string[] sortParts = sortExpression.Split(' ');
+            var param = Expression.Parameter(typeof(T), string.Empty);
+
+            try
+            {
+                var property = Expression.Property(param, sortParts[0]);
+                var sortLambda = Expression.Lambda<Func<T, object>>(Expression.Convert(property, typeof(object)), param);
+
+                if (sortParts.Length > 1 && sortParts[1].Equals("decending", StringComparison.OrdinalIgnoreCase))
+                {
+                    return source.AsQueryable<T>().OrderByDescending<T, object>(sortLambda);
+                }
+
+                return source.AsQueryable<T>().OrderBy<T, object>(sortLambda);
+            }
+            catch (ArgumentException)
+            {
+                return source;
+            }
+        }
+
         public static bool IsValidDataTable(this System.Data.DataTable dataTable, int rowCount = 0)
         {
             var isValid = false;
@@ -32,7 +64,7 @@ namespace Amalay.Helpers
 
             return isValid;
         }
-
+        
         /// <summary>
         /// Extension method to check whether the data reader has this column or not before reading the data from it.
         /// </summary>
