@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Amalay.Helpers.DataAccess.SqlServer
+namespace Amalay.Helpers
 {
     public class SqlHelper
     {

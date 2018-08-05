@@ -25,11 +25,4 @@ namespace Amalay.Helpers
         NewtonsoftJsonSerializer = 0,
         DataContractJsonSerializer = 1
     }
-
-    public struct DataProviders
-    {
-        public const string SqlServer = "SqlServer";
-        public const string Oracle = "Oracle";
-        public const string MySql = "MySql";
-    }
 }
