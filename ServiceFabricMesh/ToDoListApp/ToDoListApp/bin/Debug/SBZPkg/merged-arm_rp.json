@@ -1,0 +1,147 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2014-04-01-preview/deploymentTemplate.json",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "defaultValue": "SouthCentralUS",
+      "type": "String",
+      "metadata": {
+        "description": "Location of the resources."
+      }
+    },
+    "registryPassword": {
+      "defaultValue": "",
+      "type": "SecureString"
+    }
+  },
+  "resources": [
+    {
+      "apiVersion": "2018-07-01-preview",
+      "name": "ToDoListApp",
+      "type": "Microsoft.ServiceFabricMesh/applications",
+      "location": "[parameters('location')]",
+      "dependsOn": [
+        "Microsoft.ServiceFabricMesh/networks/ToDoListAppNetwork"
+      ],
+      "properties": {
+        "services": [
+          {
+            "name": "WebApp",
+            "properties": {
+              "description": "WebApp description.",
+              "osType": "Windows",
+              "codePackages": [
+                {
+                  "name": "WebApp",
+                  "image": "bitcsfmeshcontainerregistry.azurecr.io/webapp:20180928203829",
+                  "endpoints": [
+                    {
+                      "name": "WebAppListener",
+                      "port": 20005
+                    }
+                  ],
+                  "environmentVariables": [
+                    {
+                      "name": "ASPNETCORE_URLS",
+                      "value": "http://+:20005"
+                    },
+                    {
+                      "name": "ApiHostPort",
+                      "value": "20003"
+                    },
+                    {
+                      "name": "ToDoServiceName",
+                      "value": "ToDoService"
+                    }
+                  ],
+                  "resources": {
+                    "requests": {
+                      "cpu": 0.5,
+                      "memoryInGB": 1.0
+                    }
+                  },
+                  "imageRegistryCredential": {
+                    "server": "bitcsfmeshcontainerregistry.azurecr.io",
+                    "username": "bitcsfmeshcontainerregistry",
+                    "password": "[parameters('registryPassword')]"
+                  }
+                }
+              ],
+              "replicaCount": 1,
+              "networkRefs": [
+                {
+                  "name": "[resourceId('Microsoft.ServiceFabricMesh/networks', 'ToDoListAppNetwork')]"
+                }
+              ]
+            }
+          },
+          {
+            "name": "ToDoService",
+            "properties": {
+              "description": "ToDoService description.",
+              "osType": "Windows",
+              "codePackages": [
+                {
+                  "name": "ToDoService",
+                  "image": "bitcsfmeshcontainerregistry.azurecr.io/todoservice:20180928203829",
+                  "endpoints": [
+                    {
+                      "name": "ToDoServiceListener",
+                      "port": 20003
+                    }
+                  ],
+                  "environmentVariables": [
+                    {
+                      "name": "ASPNETCORE_URLS",
+                      "value": "http://+:20003"
+                    }
+                  ],
+                  "resources": {
+                    "requests": {
+                      "cpu": 0.5,
+                      "memoryInGB": 1.0
+                    }
+                  },
+                  "imageRegistryCredential": {
+                    "server": "bitcsfmeshcontainerregistry.azurecr.io",
+                    "username": "bitcsfmeshcontainerregistry",
+                    "password": "[parameters('registryPassword')]"
+                  }
+                }
+              ],
+              "replicaCount": 1,
+              "networkRefs": [
+                {
+                  "name": "[resourceId('Microsoft.ServiceFabricMesh/networks', 'ToDoListAppNetwork')]"
+                }
+              ]
+            }
+          }
+        ],
+        "description": "ToDoListApp description."
+      }
+    },
+    {
+      "apiVersion": "2018-07-01-preview",
+      "name": "ToDoListAppNetwork",
+      "type": "Microsoft.ServiceFabricMesh/networks",
+      "location": "[parameters('location')]",
+      "dependsOn": [],
+      "properties": {
+        "description": "ToDoListAppNetwork description.",
+        "addressPrefix": "10.0.0.4/22",
+        "ingressConfig": {
+          "layer4": [
+            {
+              "name": "WebAppIngress",
+              "publicPort": "20005",
+              "applicationName": "ToDoListApp",
+              "serviceName": "WebApp",
+              "endpointName": "WebAppListener"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "schemaVersion": "1.0.0-preview1",
+  "name": "ToDoListApp",
+  "properties": {
+    "services": [
+      {
+        "name": "WebApp",
+        "properties": {
+          "description": "WebApp description.",
+          "osType": "Windows",
+          "codePackages": [
+            {
+              "name": "WebApp",
+              "image": "webapp:dev",
+              "endpoints": [
+                {
+                  "name": "WebAppListener",
+                  "port": 20005
+                }
+              ],
+              "environmentVariables": [
+                {
+                  "name": "ASPNETCORE_URLS",
+                  "value": "http://+:20005"
+                },
+                {
+                  "name": "ApiHostPort",
+                  "value": "20003"
+                },
+                {
+                  "name": "ToDoServiceName",
+                  "value": "ToDoService"
+                }
+              ],
+              "resources": {
+                "requests": {
+                  "cpu": 0.5,
+                  "memoryInGB": 1.0
+                }
+              }
+            }
+          ],
+          "replicaCount": 1,
+          "networkRefs": [
+            {
+              "name": "ToDoListAppNetwork"
+            }
+          ]
+        }
+      },
+      {
+        "name": "ToDoService",
+        "properties": {
+          "description": "ToDoService description.",
+          "osType": "Windows",
+          "codePackages": [
+            {
+              "name": "ToDoService",
+              "image": "todoservice:dev",
+              "endpoints": [
+                {
+                  "name": "ToDoServiceListener",
+                  "port": 20003
+                }
+              ],
+              "environmentVariables": [
+                {
+                  "name": "ASPNETCORE_URLS",
+                  "value": "http://+:20003"
+                }
+              ],
+              "resources": {
+                "requests": {
+                  "cpu": 0.5,
+                  "memoryInGB": 1.0
+                }
+              }
+            }
+          ],
+          "replicaCount": 1,
+          "networkRefs": [
+            {
+              "name": "ToDoListAppNetwork"
+            }
+          ]
+        }
+      }
+    ],
+    "description": "ToDoListApp description.",
+    "debugParams": "[\n  {\n    \"ServiceManifestName\": \"WebAppPkg\",\n    \"CodePackageName\": \"WebApp\",\n    \"ContainerDebugParams\":\n    {\n      \"Entrypoint\": [\"C:\\\\remote_debugger\\\\x64\\\\msvsmon.exe\", \"/noauth\", \"/anyuser\", \"/silent\", \"/nostatus\", \"/noclrwarn\", \"/nosecuritywarn\", \"/nofirewallwarn\", \"/nowowwarn\", \"/fallbackloadremotemanagedpdbs\", \"/timeout:2147483646\"],\n      \"EnvVars\": [\"ASPNETCORE_ENVIRONMENT=Development\", \"SERVICE_PROJECT_VOLUME_PATH=C:\\\\app\", \"NUGET_PACKAGES=C:\\\\nuget1\", \"NUGET_FALLBACK_PACKAGES=C:\\\\nuget2\"],\n      \"Volumes\": [\"C:\\\\Users\\\\Amalay\\\\onecoremsvsmon\\\\15.0.28010.2016:C:\\\\remote_debugger\", \"D:\\\\Samples\\\\SFMesh\\\\ToDoListApp\\\\WebApp:C:\\\\app\", \"C:\\\\Users\\\\Amalay\\\\.nuget\\\\packages:C:\\\\nuget1\", \"C:\\\\Program Files\\\\dotnet\\\\sdk\\\\NuGetFallbackFolder:C:\\\\nuget2\"]\n    }\n  },\n  {\n    \"ServiceManifestName\": \"ToDoServicePkg\",\n    \"CodePackageName\": \"ToDoService\",\n    \"ContainerDebugParams\":\n    {\n      \"Entrypoint\": [\"C:\\\\remote_debugger\\\\x64\\\\msvsmon.exe\", \"/noauth\", \"/anyuser\", \"/silent\", \"/nostatus\", \"/noclrwarn\", \"/nosecuritywarn\", \"/nofirewallwarn\", \"/nowowwarn\", \"/fallbackloadremotemanagedpdbs\", \"/timeout:2147483646\"],\n      \"EnvVars\": [\"ASPNETCORE_ENVIRONMENT=Development\", \"SERVICE_PROJECT_VOLUME_PATH=C:\\\\app\", \"NUGET_PACKAGES=C:\\\\nuget1\", \"NUGET_FALLBACK_PACKAGES=C:\\\\nuget2\"],\n      \"Volumes\": [\"C:\\\\Users\\\\Amalay\\\\onecoremsvsmon\\\\15.0.28010.2016:C:\\\\remote_debugger\", \"D:\\\\Samples\\\\SFMesh\\\\ToDoListApp\\\\ToDoService:C:\\\\app\", \"C:\\\\Users\\\\Amalay\\\\.nuget\\\\packages:C:\\\\nuget1\", \"C:\\\\Program Files\\\\dotnet\\\\sdk\\\\NuGetFallbackFolder:C:\\\\nuget2\"]\n    }\n  }\n]\n"
+  }
+}

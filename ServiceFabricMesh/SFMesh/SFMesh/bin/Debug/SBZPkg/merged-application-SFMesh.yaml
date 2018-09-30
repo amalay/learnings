@@ -1,0 +1,27 @@
+application:
+  schemaVersion: 1.0.0-preview1
+  name: SFMesh
+  properties:
+    services:
+    - name: EMSWeb
+      properties:
+        description: EMSWeb description.
+        osType: Windows
+        codePackages:
+        - name: EMSWeb
+          image: emsweb:dev
+          endpoints:
+          - name: EMSWebListener
+            port: 20000
+          environmentVariables:
+          - name: ASPNETCORE_URLS
+            value: http://+:20000
+          resources:
+            requests:
+              cpu: 0.5
+              memoryInGB: 1
+        replicaCount: 1
+        networkRefs:
+        - name: SFMeshNetwork
+    description: SFMesh description.
+

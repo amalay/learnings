@@ -1,0 +1,20 @@
+{
+  "ServiceName": "ToDoService",
+  "CodePackageName": "ToDoService",
+  "DevelopmentMode": "Fast",
+  "ServiceSettingsFilePath": "D:\\Samples\\SFMesh\\ToDoListApp\\ToDoService\\Service Resources\\service.yaml",
+  "ServiceSettingsFileHash": "MD64clVNITXM7gKlW+oK0Ludlr+vBS3FXm1Qgkwn2PE=",
+  "Entrypoint": "C:\\remote_debugger\\x64\\msvsmon.exe /noauth /anyuser /silent /nostatus /noclrwarn /nosecuritywarn /nofirewallwarn /nowowwarn /fallbackloadremotemanagedpdbs /timeout:2147483646",
+  "VolumeMappings": [
+    "C:\\Users\\Amalay\\onecoremsvsmon\\15.0.28010.2016::C:\\remote_debugger",
+    "D:\\Samples\\SFMesh\\ToDoListApp\\ToDoService::C:\\app",
+    "C:\\Users\\Amalay\\.nuget\\packages::C:\\nuget1",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder::C:\\nuget2"
+  ],
+  "EnvironmentVariables": [
+    "ASPNETCORE_ENVIRONMENT=Development",
+    "SERVICE_PROJECT_VOLUME_PATH=C:\\app",
+    "NUGET_PACKAGES=C:\\nuget1",
+    "NUGET_FALLBACK_PACKAGES=C:\\nuget2"
+  ]
+}

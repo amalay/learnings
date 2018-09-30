@@ -1,0 +1,14 @@
+network:
+  schemaVersion: 1.0.0-preview1
+  name: SFMeshNetwork
+  properties:
+    description: SFMeshNetwork description.
+    addressPrefix: 10.0.0.4/22
+    ingressConfig:
+      layer4:
+      - name: EMSWebIngress
+        publicPort: 20000
+        applicationName: SFMesh
+        serviceName: EMSWeb
+        endpointName: EMSWebListener
+

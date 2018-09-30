@@ -1,0 +1,15 @@
+{
+  "BuiltDockerfiles": [
+    {
+      "ServiceName": "EMSWeb",
+      "CodePackageName": "EMSWeb",
+      "DockerfilePath": "D:\\Samples\\SFMesh\\SFMesh\\EMSWeb\\Dockerfile",
+      "BuildContextPath": "D:\\Samples\\SFMesh\\SFMesh",
+      "DockerfileHash": "i37CFTkdJc1drECb9qh1SMo4IaExsF0m12IxaSOc8p8=",
+      "DockerIgnoreFileHash": "XHz8aUYl8MB6VeDpzVtNsST4hgewNSyNaO7p3eralQ0=",
+      "BuildStage": "",
+      "ImageTag": "emsweb:dev",
+      "ImageId": "sha256:116fdb7c300dfb2264fa969aebadbb1af56b81cd3e139f62db9a1708d099ef02"
+    }
+  ]
+}

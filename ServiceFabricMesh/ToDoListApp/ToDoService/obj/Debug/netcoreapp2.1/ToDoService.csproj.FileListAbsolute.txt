@@ -1,0 +1,17 @@
+D:\Samples\SFMesh\ToDoListApp\ToDoService\bin\Debug\netcoreapp2.1\ToDoService.deps.json
+D:\Samples\SFMesh\ToDoListApp\ToDoService\bin\Debug\netcoreapp2.1\ToDoService.runtimeconfig.json
+D:\Samples\SFMesh\ToDoListApp\ToDoService\bin\Debug\netcoreapp2.1\ToDoService.runtimeconfig.dev.json
+D:\Samples\SFMesh\ToDoListApp\ToDoService\bin\Debug\netcoreapp2.1\ToDoService.dll
+D:\Samples\SFMesh\ToDoListApp\ToDoService\bin\Debug\netcoreapp2.1\ToDoService.pdb
+D:\Samples\SFMesh\ToDoListApp\ToDoService\bin\Debug\netcoreapp2.1\Entities.dll
+D:\Samples\SFMesh\ToDoListApp\ToDoService\bin\Debug\netcoreapp2.1\Entities.pdb
+D:\Samples\SFMesh\ToDoListApp\ToDoService\obj\Debug\netcoreapp2.1\ToDoService.csprojAssemblyReference.cache
+D:\Samples\SFMesh\ToDoListApp\ToDoService\obj\Debug\netcoreapp2.1\ToDoService.csproj.CoreCompileInputs.cache
+D:\Samples\SFMesh\ToDoListApp\ToDoService\obj\Debug\netcoreapp2.1\ToDoService.RazorAssemblyInfo.cache
+D:\Samples\SFMesh\ToDoListApp\ToDoService\obj\Debug\netcoreapp2.1\ToDoService.RazorAssemblyInfo.cs
+D:\Samples\SFMesh\ToDoListApp\ToDoService\obj\Debug\netcoreapp2.1\ToDoService.AssemblyInfoInputs.cache
+D:\Samples\SFMesh\ToDoListApp\ToDoService\obj\Debug\netcoreapp2.1\ToDoService.AssemblyInfo.cs
+D:\Samples\SFMesh\ToDoListApp\ToDoService\obj\Debug\netcoreapp2.1\ToDoService.RazorTargetAssemblyInfo.cache
+D:\Samples\SFMesh\ToDoListApp\ToDoService\obj\Debug\netcoreapp2.1\ToDoService.csproj.CopyComplete
+D:\Samples\SFMesh\ToDoListApp\ToDoService\obj\Debug\netcoreapp2.1\ToDoService.dll
+D:\Samples\SFMesh\ToDoListApp\ToDoService\obj\Debug\netcoreapp2.1\ToDoService.pdb

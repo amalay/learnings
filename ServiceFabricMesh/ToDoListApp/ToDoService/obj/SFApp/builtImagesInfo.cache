@@ -1,0 +1,15 @@
+{
+  "BuiltDockerfiles": [
+    {
+      "ServiceName": "ToDoService",
+      "CodePackageName": "ToDoService",
+      "DockerfilePath": "D:\\Samples\\SFMesh\\ToDoListApp\\ToDoService\\Dockerfile",
+      "BuildContextPath": "D:\\Samples\\SFMesh\\ToDoListApp",
+      "DockerfileHash": "0x63sLCjUy+9eiS/58g9urYQeWv1wJVAohI3UFnajEE=",
+      "DockerIgnoreFileHash": "XHz8aUYl8MB6VeDpzVtNsST4hgewNSyNaO7p3eralQ0=",
+      "BuildStage": "",
+      "ImageTag": "todoservice:dev",
+      "ImageId": "sha256:5a7f8c7430c385e8496b9cf5a634d6841d16a936b4a58c2b5ff027f4ff6dcc57"
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2014-04-01-preview/deploymentTemplate.json",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "defaultValue": "SouthCentralUS",
+      "type": "String",
+      "metadata": {
+        "description": "Location of the resources."
+      }
+    },
+    "registryPassword": {
+      "defaultValue": "",
+      "type": "SecureString"
+    }
+  },
+  "resources": [
+    {
+      "apiVersion": "2018-07-01-preview",
+      "name": "SFMesh",
+      "type": "Microsoft.ServiceFabricMesh/applications",
+      "location": "[parameters('location')]",
+      "dependsOn": [
+        "Microsoft.ServiceFabricMesh/networks/SFMeshNetwork"
+      ],
+      "properties": {
+        "services": [
+          {
+            "name": "EMSWeb",
+            "properties": {
+              "description": "EMSWeb description.",
+              "osType": "Windows",
+              "codePackages": [
+                {
+                  "name": "EMSWeb",
+                  "image": "bitcsfmeshcontainerregistry.azurecr.io/emsweb:20180928184939",
+                  "endpoints": [
+                    {
+                      "name": "EMSWebListener",
+                      "port": 20000
+                    }
+                  ],
+                  "environmentVariables": [
+                    {
+                      "name": "ASPNETCORE_URLS",
+                      "value": "http://+:20000"
+                    }
+                  ],
+                  "resources": {
+                    "requests": {
+                      "cpu": 0.5,
+                      "memoryInGB": 1.0
+                    }
+                  },
+                  "imageRegistryCredential": {
+                    "server": "bitcsfmeshcontainerregistry.azurecr.io",
+                    "username": "bitcsfmeshcontainerregistry",
+                    "password": "[parameters('registryPassword')]"
+                  }
+                }
+              ],
+              "replicaCount": 1,
+              "networkRefs": [
+                {
+                  "name": "[resourceId('Microsoft.ServiceFabricMesh/networks', 'SFMeshNetwork')]"
+                }
+              ]
+            }
+          }
+        ],
+        "description": "SFMesh description."
+      }
+    },
+    {
+      "apiVersion": "2018-07-01-preview",
+      "name": "SFMeshNetwork",
+      "type": "Microsoft.ServiceFabricMesh/networks",
+      "location": "[parameters('location')]",
+      "dependsOn": [],
+      "properties": {
+        "description": "SFMeshNetwork description.",
+        "addressPrefix": "10.0.0.4/22",
+        "ingressConfig": {
+          "layer4": [
+            {
+              "name": "EMSWebIngress",
+              "publicPort": "20000",
+              "applicationName": "SFMesh",
+              "serviceName": "EMSWeb",
+              "endpointName": "EMSWebListener"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

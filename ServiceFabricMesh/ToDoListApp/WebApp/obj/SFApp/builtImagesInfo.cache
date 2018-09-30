@@ -1,0 +1,15 @@
+{
+  "BuiltDockerfiles": [
+    {
+      "ServiceName": "WebApp",
+      "CodePackageName": "WebApp",
+      "DockerfilePath": "D:\\Samples\\SFMesh\\ToDoListApp\\WebApp\\Dockerfile",
+      "BuildContextPath": "D:\\Samples\\SFMesh\\ToDoListApp",
+      "DockerfileHash": "EY4g5k7AO0AHXuQzkqWrTu8GYzHWPb8bVvggjv3na3U=",
+      "DockerIgnoreFileHash": "XHz8aUYl8MB6VeDpzVtNsST4hgewNSyNaO7p3eralQ0=",
+      "BuildStage": "",
+      "ImageTag": "webapp:dev",
+      "ImageId": "sha256:e172c551ee2ffd985508d48f68f1451206855b4fd6256f1468b70e7c757ab183"
+    }
+  ]
+}
