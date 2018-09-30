@@ -1,0 +1,19 @@
+﻿<Topics>
+  <Topic>
+    <Name>Notification</Name>
+    <Subscriptions>
+      <Subscription>
+        <Name>InternalEmail</Name>
+      </Subscription>      
+      <Subscription>
+        <Name>Email</Name>
+      </Subscription>      
+      <Subscription>
+        <Name>PushNotification</Name>
+      </Subscription>      
+      <Subscription>
+        <Name>CortanaNotification</Name>
+      </Subscription>      
+    </Subscriptions>
+  </Topic>  
+</Topics>

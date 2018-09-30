@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Amalay.FoodOrder.Models.Category>
+@{
+    ViewBag.Title = "Store";
+}
+<h3>Browse Genres</h3>
+
+<p>
+    Select from @Model.Count() genres:
+</p>
+<ul>
+    @foreach (var catagorie in Model)
+    {
+        <li>@Html.ActionLink(catagorie.Name, "Browse", new { catagory = catagory.Name })</li>
+    }
+</ul>

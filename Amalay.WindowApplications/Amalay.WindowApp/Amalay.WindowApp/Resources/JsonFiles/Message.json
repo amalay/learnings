@@ -1,0 +1,48 @@
+﻿{
+  "Message": 
+  {
+    "Id": "1",
+    "Title": "Title 1",
+    "ShortBody": "Short Body 1",
+    "FullBody": "Full Body 1"
+  },
+  "Recipients": 
+  [
+    {
+      "Id": "1",
+      "Name": "Name 1",
+      "EmailAddress": "Email Address 1"
+    },
+    {
+      "Id": "2",
+      "Name": "Name 2",
+      "EmailAddress": "Email Address 2"
+    }
+  ],
+  "CcRecipients": 
+  [
+    {
+      "Id": "3",
+      "Name": "Name 3",
+      "EmailAddress": "Email Address 3"
+    },
+    {
+      "Id": "4",
+      "Name": "Name 4",
+      "EmailAddress": "Email Address 4"
+    }
+  ],
+  "BccRecipients": 
+  [
+    {
+      "Id": "5",
+      "Name": "Name 5",
+      "EmailAddress": "Email Address 5"
+    },
+    {
+      "Id": "6",
+      "Name": "Name 6",
+      "EmailAddress": "Email Address 6"
+    }
+  ]
+}

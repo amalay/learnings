@@ -1,0 +1,120 @@
+﻿@model IEnumerable<Amalay.Model.CartModel>
+
+@{
+    ViewBag.Title = "Cart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Cart</h2>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProductUnitPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AddedQuantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FreeQuantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalQuantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DiscountedPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FinalPrice)
+        </th>
+        <th></th>
+    </tr>
+
+    @{
+        decimal totalCartPrice = 0;
+        int totalCartQuantity = 0;
+    }
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductName)
+
+                @*@if (item.Product.OfferRules != null && item.Product.OfferRules.Count > 0)
+                {
+                    <br />
+                    <b>Offer: </b>
+                    <span style="color:green;">@Html.DisplayFor(modelItem => item.Product.OfferRuleNames)</span>
+                }*@ 
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProductUnitPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AddedQuantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FreeQuantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalQuantity)
+                @{totalCartQuantity += item.TotalQuantity;}
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DiscountedPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FinalPrice)
+
+                @{totalCartPrice += item.FinalPrice;}
+            </td>
+            <td>
+                @Html.ActionLink("Increase", "IncreaseQuantity", new { id = item.ProductId }) | 
+                @Html.ActionLink("Decrease", "DecreaseQuantity", new { id = item.ProductId }) | 
+                @Html.ActionLink("Remove", "RemoveItem", new { id = item.ProductId })
+            </td>
+        </tr>
+    }
+ 
+    <tr>
+        <th>
+            
+        </th>
+        <th>
+           
+        </th>
+        <th>
+           
+        </th>
+        <th>
+            Total Cart Quantity:
+        </th>
+        <th>
+           @totalCartQuantity
+        </th>
+        <th>
+           
+        </th>
+        <th>
+            Total Cart Price:
+        </th>
+        <th>
+            @totalCartPrice
+        </th>
+        <th></th>
+    </tr>
+
+</table>
+
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>

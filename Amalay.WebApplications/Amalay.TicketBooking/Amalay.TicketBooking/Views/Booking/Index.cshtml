@@ -1,0 +1,50 @@
+﻿@model Amalay.TicketBooking.Models.BookingModel
+
+@{
+    ViewBag.Title = "Book Ticket";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Book Ticket</h2>
+
+
+@using (Html.BeginForm("Search", "Booking", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <table class="table">
+        <tr>
+            <th>               
+                @Html.LabelFor(x => Model.Seats, htmlAttributes: new { @class = "control-label" })
+            </th>
+            <td>
+                @Html.TextBoxFor(x => x.Seats)
+            </td>
+        </tr>
+        <tr>
+            <th>                
+                @Html.LabelFor(x => Model.SelectedPlaneId, htmlAttributes: new { @class = "control-label" })
+            </th>
+            @*<td>
+                @Html.DropDownListFor(x => Model.SelectedPlaneId, new SelectList(Model.Planes, "Value", "Text"), htmlAttributes: new { @class = "form-control", id = "Planes" })
+            </td>*@
+            <td>
+                @Html.DropDownListFor(m => m.SelectedPlaneId, Model.Planes, htmlAttributes: new { @class = "form-control", id = "Planes" })
+            </td>
+        </tr>
+        
+        <tr>
+            <th></th>
+            <td>               
+                <input type="submit" value="Search" />
+            </td>
+        </tr>
+        <tr>
+            <th></th>
+            <td>
+                @*@Html.Partial("SearchResult")*@
+            </td>
+        </tr>
+    </table>
+}
+

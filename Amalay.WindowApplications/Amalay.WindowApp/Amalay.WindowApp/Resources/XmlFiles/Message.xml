@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MessageInfo>
+  <Message>
+    <Id>1</Id>
+    <Title>Title 1</Title>
+    <ShortBody>Short Body 1</ShortBody>
+    <FullBody>Full Body 1</FullBody>
+  </Message>
+  <Recipients>
+    <Recipient>
+      <Id>1</Id>
+      <Name>Name 1</Name>
+      <EmailAddress>Email Address 1</EmailAddress>
+    </Recipient>
+    <Recipient>
+      <Id>2</Id>
+      <Name>Name 2</Name>
+      <EmailAddress>Email Address 2</EmailAddress>
+    </Recipient>
+  </Recipients>
+  <CcRecipients>
+    <Recipient>
+      <Id>3</Id>
+      <Name>Name 3</Name>
+      <EmailAddress>Email Address 3</EmailAddress>
+    </Recipient>
+    <Recipient>
+      <Id>4</Id>
+      <Name>Name 4</Name>
+      <EmailAddress>Email Address 4</EmailAddress>
+    </Recipient>
+  </CcRecipients>
+  <BccRecipients>
+    <Recipient>
+      <Id>5</Id>
+      <Name>Name 5</Name>
+      <EmailAddress>Email Address 5</EmailAddress>
+    </Recipient>
+    <Recipient>
+      <Id>6</Id>
+      <Name>Name 6</Name>
+      <EmailAddress>Email Address 6</EmailAddress>
+    </Recipient>
+  </BccRecipients>
+</MessageInfo>

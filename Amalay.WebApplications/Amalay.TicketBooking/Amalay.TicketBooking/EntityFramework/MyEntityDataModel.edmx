@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="AmalayDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="USP_BookSeat" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PlaneId" Type="int" Mode="In" />
+          <Parameter Name="RowIndex" Type="int" Mode="In" />
+          <Parameter Name="ColumnIndex" Type="int" Mode="In" />
+          <Parameter Name="SeatLength" Type="int" Mode="In" />
+        </Function>
+        <Function Name="USP_GetAvailableSeats" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PlaneId" Type="int" Mode="In" />
+          <Parameter Name="NoOfSeats" Type="int" Mode="In" />
+        </Function>
+        <EntityContainer Name="AmalayDbModelStoreContainer" />
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AmalayDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="AmalayDbEntities" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="USP_GetAvailableSeats" ReturnType="Collection(AmalayDbModel.USP_GetAvailableSeats_Result)">
+            <Parameter Name="PlaneId" Mode="In" Type="Int32" />
+            <Parameter Name="NoOfSeats" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="USP_BookSeat">
+            <Parameter Name="PlaneId" Mode="In" Type="Int32" />
+            <Parameter Name="RowIndex" Mode="In" Type="Int32" />
+            <Parameter Name="ColumnIndex" Mode="In" Type="Int32" />
+            <Parameter Name="SeatLength" Mode="In" Type="Int32" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="USP_GetAvailableSeats_Result">
+          <Property Type="Int32" Name="SeatingId" Nullable="true" />
+          <Property Type="Int32" Name="PlaneId" Nullable="true" />
+          <Property Type="Int32" Name="RowIndex" Nullable="true" />
+          <Property Type="Int32" Name="ColumnIndex" Nullable="true" />
+          <Property Type="Int32" Name="SeatLength" Nullable="true" />
+          <Property Type="Boolean" Name="IsBooked" Nullable="true" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AmalayDbModelStoreContainer" CdmEntityContainer="AmalayDbEntities" >
+          <FunctionImportMapping FunctionImportName="USP_GetAvailableSeats" FunctionName="AmalayDbModel.Store.USP_GetAvailableSeats">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="AmalayDbModel.USP_GetAvailableSeats_Result">
+                <ScalarProperty Name="SeatingId" ColumnName="SeatingId" />
+                <ScalarProperty Name="PlaneId" ColumnName="PlaneId" />
+                <ScalarProperty Name="RowIndex" ColumnName="RowIndex" />
+                <ScalarProperty Name="ColumnIndex" ColumnName="ColumnIndex" />
+                <ScalarProperty Name="SeatLength" ColumnName="SeatLength" />
+                <ScalarProperty Name="IsBooked" ColumnName="IsBooked" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="USP_BookSeat" FunctionName="AmalayDbModel.Store.USP_BookSeat" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
