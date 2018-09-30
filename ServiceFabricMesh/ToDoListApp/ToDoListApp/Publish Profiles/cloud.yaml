@@ -1,0 +1,18 @@
+## Visual Studio SFApp Publish Profile ##
+vsSFAppPublishProfile:
+  schemaVersion: 1.0.0-preview1
+resourceGroupName: bitcsfmeshresourcegroup
+subscription:
+  id: 5d289cb6-1606-4976-a203-3d3f947c9af6
+  name: Cerraform-Sponsorship
+  tenant: &o0
+    id: 015e5139-66b6-49a4-9490-e73f9ca5d507
+    uniqueId: 882a0513-f90f-4df9-a5ed-725c466876ff
+location:
+  name: eastus
+  displayName: East US
+containerRegistry:
+  serverName: bitcsfmeshcontainerregistry.azurecr.io
+  userName: bitcsfmeshcontainerregistry
+  resourceId: /subscriptions/5d289cb6-1606-4976-a203-3d3f947c9af6/resourceGroups/bitcsfmeshresourcegroup/providers/Microsoft.ContainerRegistry/registries/bitcsfmeshcontainerregistry
+  tenant: *o0
