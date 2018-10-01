@@ -1,0 +1,32 @@
+﻿## Service definition ##
+application:
+  schemaVersion: 1.0.0-preview1
+  name: ToDoListApp
+  properties:
+    services:
+      - name: WebApp
+        properties:
+          description: WebApp description.
+          osType: Windows
+          codePackages:
+            - name: WebApp
+              image: webapp:dev
+              endpoints:
+                - name: WebAppListener
+                  port: 20005
+              environmentVariables:
+                - name: ASPNETCORE_URLS
+                  value: http://+:20005				
+                - name: ApiHostPort
+                  value: 20003
+                - name: ToDoServiceName
+                  value: ToDoService
+#                - name: ApplicationInsights:InstrumentationKey
+#                  value: "<Place AppInsights key here, or reference it via a secret>"
+              resources:
+                requests:
+                  cpu: 0.5
+                  memoryInGB: 1
+          replicaCount: 1
+          networkRefs:
+            - name: ToDoListAppNetwork
